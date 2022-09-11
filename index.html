@@ -18,7 +18,7 @@ body {
     color:white;     /*文字颜色*/
     text-align:center;   /*文字居中*/
     padding:10px;  /*内边距*/
-    border:1px solid rgb(255, 255, 255);  /*边框*/
+    border:0px solid #f1f1f1;  /*边框*/
     border-radius: 5px;  /*圆角边框*/
     font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
 }
@@ -28,7 +28,9 @@ body {
   overflow: hidden;
   background-color: #669999;
   border-radius: 5px;
-  border:1px solid rgb(255, 255, 255); /*边框*/
+  border:0px solid #f1f1f1; /*边框*/
+  margin-top:1px; /*外边距*/
+  transition: 3s;
 }
  
 /* 导航条链接 */
@@ -47,7 +49,7 @@ body {
 /* 链接颜色修改 */
 .topnav a:hover {
   background-color: #336666;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /* 创建两列 */
@@ -64,6 +66,7 @@ body {
   background-color: #f1f1f1;
   padding-left: 20px;
   border-radius: 5px;  /*圆角边框*/
+  font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
 }
 
 /* 图像部分 */
@@ -97,18 +100,20 @@ body {
   clear: both;
 }
 
-
+/*页尾*/
 .footer {
     background-color:#336666;  /*背景色*/
     color:white;    /*文字颜色*/
     clear:both;
     text-align:center;   /*文字居中*/
     padding:6px;  /*内边距*/
-    border:1px solid #f1f1f1; /*边框*/
+    border:0px solid #f1f1f1; /*边框*/
+    margin-top:15px; /*外边距*/
     border-radius: 5px;  /*圆角边框*/
     font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
     font-weight:lighter; /*细字体*/
 }
+
 /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -127,12 +132,12 @@ body {
 
 /* 未访问链接*/
 a:link {
-    color:#000000;
+    color:#ffffff;
     text-decoration:none;
 }
 /* 已访问链接 */
 a:visited {
-    color:#000000;
+    color:#ffffff;
     text-decoration:none;
 }
 /* 鼠标移动到链接上 */
@@ -172,18 +177,14 @@ a:active {
         <div class="card">
             <h2>沉静</h2>
             <h5>2022 年 4 月 17日</h5>
-            
             <img id="img_0" src="picture/shui.jpg" alt="水"width="400"height="300">
-            
             <p></p>
             <p></p>
           </div>
           <div class="card">
-            <h2>山峰</h2>
+            <h2>高山仰止</h2>
             <h5>2022 年 4 月 16日</h5>
-            
             <img id="img_0" src="picture/justin-kauffman-a8lTjWJJgLA-unsplash.jpg" alt="山" width="400"height="300">
-            
             <p></p>
             <p></p>
           </div>
@@ -196,6 +197,7 @@ a:active {
       </div>
       <div class="card">
         <h3>热门文章</h3>
+        <p>这里什么都没有...</p>
       </div>
       <div class="card">
         <h3>关注我</h3>
