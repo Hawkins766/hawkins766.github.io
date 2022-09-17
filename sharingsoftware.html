@@ -4,72 +4,46 @@
 <meta charset="utf-8">
 <title>常用软件</title>
 <style>
+/*全局背景色*/
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+/*页头*/
 #header {
     background-color:#336666;
     color:white;
     text-align:center;
     padding:10px;  /*内边距*/
-    border:1px solid rgb(255, 255, 255);  /*边框*/
+    margin-top: 0px; /*上边距*/
+    margin-bottom:10px; /*下边距*/
+    margin-left:0px; /*左边距*/
+    margin-right:0px; /*右边距*/
     border-radius: 5px;  /*圆角边框*/
     font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
 }
+/*左导航栏外部设置*/
 #nav {
     line-height:30px;
     background-color:#669999;
     color:white;
-    height:737px;
+    height:1085px;
     width:140px;
     float:left;
     padding:15px; /*内边距*/
-    border:1px solid rgb(255, 255, 255); /*边框*/
+    margin-top: 10px; /*上边距*/
+    margin-bottom:20px; /*下边距*/
+    margin-left:0px; /*左边距*/
+    margin-right:0px; /*右边距*/
     border-radius: 5px;  /*圆角边框*/
     font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
     font-weight:bold;  /*加粗字体*/
 }
-#section {
-    width:338px;
-    float:left;
-    padding:25px; /*内边距*/
-    border:1px solid rgb(255, 255, 255);  /*边框*/
-    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-}
-#footer {
-    background-color:#336666;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:6px;  /*内边距*/
-    border:1px solid rgb(255, 255, 255); /*边框*/
-    border-radius: 5px;  /*圆角边框*/
-    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-    font-weight:lighter; /*细字体*/
-}
-/* 未访问链接*/
-a:link {
-    color:#000000;
-    text-decoration:none;
-}
-/* 已访问链接 */
-a:visited {
-    color:#000000;
-    text-decoration:none;
-}
-/* 鼠标移动到链接上 */
-a:hover {
-    color:#336666;
-    text-decoration:none;
-    font-size:100%;   /*触碰时改变字体大小*/
-}
-/* 鼠标点击时 */
-a:active {
-    color:#336666;
-    text-decoration:none;
-}
-/*注意： a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果*/
-/*注意： a:active 必须在 a:hover 之后。*/
-
-
-ul {
+/*
+左导航栏内部设置
+*/
+#ul_0 {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -77,34 +51,172 @@ ul {
     background-color: #669999;
 }
 
-li a {
+#nav a {
     display: block;
-    color: #000;
+    color: rgb(255, 255, 255);
     padding: 8px 16px;
     text-decoration: none;
 }
 
-li a.active {
+#nav a.active {
     background-color: #336666;
     color: white;
     border-radius: 5px;  /*圆角边框*/
 }
 
-li a:hover:not(.active) {
+#nav a:hover:not(.active) {
     background-color: #336666;
     color: white;
     border-radius: 5px;  /*圆角边框*/
 }
+/*网页内容*/
+#section {
+    background-color: rgb(255, 255, 255);
+    width:1200px;
+    height:1065px;
+    float:left;
+    margin-top: 10px; /*上边距*/
+    margin-bottom:20px; /*下边距*/
+    margin-left:20px; /*左边距*/
+    margin-right:20px; /*右边距*/
+    padding:25px; /*内边距*/
+    border-radius: 5px;  /*圆角边框*/
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+}
+/*右索引外部设置*/
+#index {
+    background-color: rgb(255, 255, 255);
+    width:335px;
+    height:785px;
+    float:left;
+    margin-top: 10px; /*上边距*/
+    margin-bottom:20px; /*下边距*/
+    margin-left:20px; /*左边距*/
+    margin-right:0px; /*右边距*/
+    padding:25px; /*内边距*/
+    border-radius: 5px;  /*圆角边框*/
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+}
+/*右索引内部设置*/
+#ul_1 {
+    list-style-type: none;
+}
+/*页尾*/
+#footer {
+    background-color:#336666;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:6px;  /*内边距*/
+    margin-top: 0px; /*上边距*/
+    margin-bottom:0px; /*下边距*/
+    margin-left:0px; /*左边距*/
+    margin-right:0px; /*右边距*/
+    border-radius: 5px;  /*圆角边框*/
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+    font-weight:lighter; /*细字体*/
+}
 
+/*
+====链接相关设置====
+*/
+/*此处仅对内容内的链接生效*/
+/* 未访问链接*/
+#section a:link {
+    color:#000000;
+    text-decoration:none;
+}
+/* 已访问链接 */
+#section a:visited {
+    color:#000000;
+    text-decoration:none;
+}
+/* 鼠标移动到链接上 */
+#section a:hover {
+    color:#336666;
+    text-decoration:none;
+    font-size:100%;   /*触碰时改变字体大小*/
+}
+/* 鼠标点击时 */
+#section a:active {
+    color:#336666;
+    text-decoration:none;
+}
+/*end*/
+
+/*此处仅对索引栏中的链接生效*/
+/* 未访问链接*/
+#index a:link {
+    color:#000000;
+    text-decoration:none;
+}
+/* 已访问链接 */
+#index a:visited {
+    color:#000000;
+    text-decoration:none;
+}
+/* 鼠标移动到链接上 */
+#index a:hover {
+    color:#336666;
+    text-decoration:none;
+    font-size:130%;   /*触碰时改变字体大小*/
+}
+/* 鼠标点击时 */
+#index a:active {
+    color:#336666;
+    text-decoration:none;
+}
+/*end*/
+/*
+表格设置
+*/
+#table_0 {
+    border-collapse: collapse;
+    width: 50%;
+    border-radius: 5px;  /*圆角边框*/
+}
+#table_0 th, #table_0 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#table_0 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #669999;
+  color: white;
+}
+/*可悬停表格*/
+#table_0 tr:hover {
+    background-color:#f5f5f5;
+}
+/*条状表格*/
+#table_0 tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+/*软件简介*/
+#introduction_0 {
+    background-color: #f5f5f5;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-left-color: #669999;
+    border-width: 0px 0px 0px 5px;
+    text-align: left;
+    padding: 8px;
+    width: 55%;
+}
 </style>
 
 </head>
 <body>
     <div id="header">
-    <h1>"Carton"</h1>
+    <h1 id=>"Carton"</h1>
     </div>
     <div id="nav">
-        <ul>
+        <ul id="ul_0">
             <li><a href="https://hawkins766.github.io">Start</a></li>
             <li><a class="active" href="https://hawkins766.github.io/sharingsoftware.html">常用软件</a></li>
             <li><a href="https://hawkins766.github.io/commonly_used_website.html">常用网站</a></li>
@@ -115,10 +227,14 @@ li a:hover:not(.active) {
     <div id="section">
     <h2>虚拟计算软件</h2>
     <b>
-        <p><img src="picture/Vmware_workstation_16_icon.svg.png" alt="VMware图标" width="33" height="32"> VMware Workstation Pro</p>
+        <p id="vmware"><img src="picture/Vmware_workstation_16_icon.svg.png" alt="VMware图标" width="33" height="32"> VMware Workstation Pro</p>
     </b>
-    <table border="1">
-        <caption>版本</caption>
+    <p id="introduction_0">VMware Workstation Pro是VMware公司推出的一款桌面虚拟计算软件，具有Windows、Linux 版本。此软件可以提供虚拟机功能，使计算机可以同时运行多个不同操作系统。
+        <br>10.0.7:最后一个支持包括Windows XP在内的32位Windows的版本<br>
+            15.7:支持 4K 分辨率,支持 Windows 10 版本 1803 及最新的 Ubuntu 等 Linux 操作系统,图形共享存储器支持高达 3GB<br>
+            16.2.2:支持使用 DirectX 11 和 OpenGL 4.1 3D 加速图形,加入了全新的“暗黑模式”用户界面,加入了对 Windows Hyper-V 模式的支持
+    </p>
+    <table border="1" id="table_0">
         <tr>
             <th>版本号</th>
             <th>下载地址</th>
@@ -126,35 +242,60 @@ li a:hover:not(.active) {
        </tr>
        <tr>
            <td> 16.2.2 </td>
-           <td><a href= "https://www.aliyundrive.com/s/hTdLkH7GqkZ" style="text-decoration:none;"> 阿里云下载 </a></td>
+           <td><a href= "https://www.aliyundrive.com/s/hTdLkH7GqkZ"> 阿里云下载 </a></td>
            <td> j99b </td>
        </tr>
        <tr>
            <td> 15.7 </td>
-           <td><a href= "https://www.aliyundrive.com/s/ioSo1oRMHKn" style="text-decoration:none;"> 阿里云下载 </a></td>
+           <td><a href= "https://www.aliyundrive.com/s/ioSo1oRMHKn"> 阿里云下载 </a></td>
            <td> yp59 </td>
        </tr>
        <tr>
            <td> 10.0.7 </td>
-           <td><a href= "https://www.aliyundrive.com/s/s1rSvyX8mRB" style="text-decoration:none;"> 阿里云下载 </a></td>
+           <td><a href= "https://www.aliyundrive.com/s/s1rSvyX8mRB"> 阿里云下载 </a></td>
            <td> 22wf </td>
        </tr>
     </table>
     <h2>工具软件</h2>
-    <p>
-       <b>Bat_To_Exe_Converter</b>
-    </p>
-    <a href="https://wwc.lanzoum.com/ihql20aijfra" style="text-decoration:none;">蓝奏云下载</a>
-    <p>
-        提取码:71pr
-    </p>
-    <p>
-       <b>innosetup-6.0.3</b>
-    </p>
-    <a href="https://wwc.lanzoum.com/ikwTl0aijg2b" style="text-decoration:none;">蓝奏云下载</a>
-    <p>
-        提取码:1b61
-    </p>
+    <b>
+        <p id="bat"><img src="picture/Bat_To_Exe_Converter_48x48.png" alt="图标" width="33" height="32">Bat To Exe Converter</p>
+    </b>
+    <p id="introduction_0">Bat To Exe Converter 是一款可以将批处理文件bat转换成exe应用程序的软件</p>
+    <table border="1" id="table_0">
+        <tr>
+            <th>版本号</th>
+            <th>下载地址</th>
+            <th>提取码</th>
+       </tr>
+       <tr>
+            <td>2.4.6</td>
+            <td><a href="https://wwc.lanzoum.com/ihql20aijfra">蓝奏云下载</a></td>
+            <td>71pr</td>
+       </tr>
+    </table>
+    <b>
+        <p id="innp"><img src="picture/innpsetup.png" alt="图标" width="33" height="32">InnpSetup Compiler</p>
+    </b>
+    <p id="introduction_0">Inno Setup是一个免费的安装程序制作软件，可以制作出安装程序。Inno Setup设计了一套脚本语言，用户利用该脚本语言设计安装流程，然后经过Inno Setup的编译，即可产生安装程序。</p>
+    <table border="1" id="table_0">
+        <tr>
+            <th>版本号</th>
+            <th>下载地址</th>
+            <th>提取码</th>
+       </tr>
+       <tr>
+            <td>6.0.3</td>
+            <td><a href="https://wwc.lanzoum.com/ikwTl0aijg2b">蓝奏云下载</a></td>
+            <td>1b61</td>
+       </tr>
+    </table>
+
+    </div>
+    <div id="index">
+        <h2>快速索引</h2>
+        <li id="ul_1"><a href="#vmware">VMware Workstation Pro</a></li>
+        <li id="ul_1"><a href="#bat">Bat To Exe Converter</a></li>
+        <li id="ul_1"><a href="#innp">InnpSetup Compiler</a></li>
     </div>
     <div id="footer">
     Copyright Nothing
