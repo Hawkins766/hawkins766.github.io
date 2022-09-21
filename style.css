@@ -1,7 +1,7 @@
 /*全局背景色*/
 body {
     font-family: Arial;
-    padding: 10px;
+    padding: 0px;
     background: #f1f1f1;
   }
   /*页头*/
@@ -11,12 +11,12 @@ body {
       text-align:center;
       padding:10px;  /*内边距*/
       margin-top: 0px; /*上边距*/
-      margin-bottom:10px; /*下边距*/
+      margin-bottom:30px; /*下边距*/
       margin-left:0px; /*左边距*/
       margin-right:0px; /*右边距*/
-      border-radius: 5px;  /*圆角边框*/
+      border-radius: 0px;  /*圆角边框*/
       font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   /*左导航栏外部设置*/
   #nav {
@@ -73,7 +73,7 @@ body {
   #section {
       background-color: rgb(255, 255, 255);
       width:800px;
-      height:1065px;
+      min-height: 700px;
       float:left;
       margin-top: 10px; /*上边距*/
       margin-bottom:20px; /*下边距*/
@@ -88,8 +88,8 @@ body {
   #index {
       background-color: rgb(255, 255, 255);
       color: #669999;
-      width:240px;
-      height:300px;
+      min-width: 210px; 
+      min-height: 100px;
       float:left;
       margin-top: 10px; /*上边距*/
       margin-bottom:20px; /*下边距*/
@@ -116,7 +116,7 @@ body {
       margin-bottom:0px; /*下边距*/
       margin-left:0px; /*左边距*/
       margin-right:0px; /*右边距*/
-      border-radius: 5px;  /*圆角边框*/
+      border-radius: 0px;  /*圆角边框*/
       font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
       font-weight:lighter; /*细字体*/
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -215,3 +215,4 @@ body {
       padding: 8px;
       width: 80%;
   }
+  /*分页文件*/
