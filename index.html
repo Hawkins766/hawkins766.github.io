@@ -1,196 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>"Carton"</title>
-<style>
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial;
-  padding: 0px;
-  background: #f1f1f1;
-}
-/* 头部标题 */
-.header {
-    background-color:#336666;  /*背景色*/
-    color:white;     /*文字颜色*/
-    text-align:center;   /*文字居中*/
-    padding:10px;  /*内边距*/
-    border:0px solid #f1f1f1;  /*边框*/
-    border-radius: 0px;  /*圆角边框*/
-    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-/* 导航条 */
-.topnav {
-  overflow: hidden;
-  background-color: #669999;
-  border-radius: 5px;
-  border:0px solid #f1f1f1; /*边框*/
-  margin-top:40px; /*外边距*/
-  transition: 3s;
-  margin-left:400px; /*左边距*/
-  margin-right:180px; /*右边距*/
-  margin-bottom:20px; /*下边距*/
-}
- 
-/* 导航条链接 */
-.topnav a {
-  float: left;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  border-radius: 0px;
-  font-weight:bold; /*加粗字体*/
-  font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-  transition-duration: 0.4s;
-  
-}
-/* 链接颜色修改 */
-.topnav a:hover {
-  background-color: #336666;
-  color: rgb(255, 255, 255);
-}
-
-/* 创建两列 */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* 右侧栏 */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-  border-radius: 5px;  /*圆角边框*/
-  font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-}
-
-/* 图像部分 */
-.fake_img {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-  border-radius: 5px;  /*圆角边框*/
-}
-.img_0 {
-    padding: 0px;
-    border-radius: 5px;  /*圆角边框*/
-}
-.img_user_small_0 {
-    padding: 0px;
-    border-radius: 5px;  /*圆角边框*/
-}
-
-/* 文章卡片效果 */
-.card_0 {
-  background-color: #ffffff;
-  padding: 25px;
-  margin-top: 20px;
-  border-radius: 5px;  /*圆角边框*/
-  margin-left:400px; /*左边距*/
-  margin-right:20px; /*右边距*/
-}
-.card_1 {
-  background-color: #ffffff;
-  padding: 25px;
-  margin-top: 20px;
-  border-radius: 5px;  /*圆角边框*/
-  margin-left:10px; /*左边距*/
-  margin-right:180px; /*右边距*/
-}
-/* 列后面清除浮动 */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*页尾*/
-.footer {
-    background-color:#336666;  /*背景色*/
-    color:white;    /*文字颜色*/
-    clear:both;
-    text-align:center;   /*文字居中*/
-    padding:6px;  /*内边距*/
-    border:0px solid #f1f1f1; /*边框*/
-    margin-top:15px; /*外边距*/
-    border-radius: 0px;  /*圆角边框*/
-    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
-    font-weight:lighter; /*细字体*/
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
- 
-/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/* 未访问链接*/
-.card_0 :link {
-    color:#000000;
-    text-decoration:none; /*隐藏下划线*/
-}
-/* 已访问链接 */
-.card_0 a:visited {
-    color:#000000;
-    text-decoration:none; /*隐藏下划线*/
-}
-/* 鼠标移动到链接上 */
-.card_0 a:hover {
-    color:#336666;
-    text-decoration:none; /*隐藏下划线*/
-    font-size:100%;   /*触碰时改变字体大小*/
-}
-/* 鼠标点击时 */
-.card_0 a:active {
-    color:#336666;
-    text-decoration:none;  /*隐藏列表标记符*/
-}
-/*注意： a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果*/
-/*注意： a:active 必须在 a:hover 之后。*/
-
-/* 未访问链接*/
-.card_1 :link {
-    color:#000000;
-    text-decoration:none; /*隐藏下划线*/
-}
-/* 已访问链接 */
-.card_1 a:visited {
-    color:#000000;
-    text-decoration:none; /*隐藏下划线*/
-}
-/* 鼠标移动到链接上 */
-.card_1 a:hover {
-    color:#336666;
-    text-decoration:none; /*隐藏下划线*/
-    font-size:100%;   /*触碰时改变字体大小*/
-}
-/* 鼠标点击时 */
-.card_1 a:active {
-    color:#336666;
-    text-decoration:none;  /*隐藏列表标记符*/
-}
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Carton"</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body leftmargin="0" topmargin="0">
@@ -205,43 +19,54 @@ body {
     <a href="https://hawkins766.github.io/commonly_used_website.html">常用网站</a>
     <a href="https://hawkins766.github.io/driver.html">硬件驱动</a>
     <a href="https://hawkins766.github.io/system_runtime.html">系统运行库</a>
-    <a style="float:right" href="https://hawkins766.github.io/index_night">暗色模式</a>
 </div>
-<div class="row">
-    <div class="leftcolumn">
-        <div class="card_0">
-            <h2>沉静</h2>
-            <h5>2022 年 4 月 17日</h5>
-            <img class="img_0" src="picture/shui.jpg" alt="水" width="400"height="300">
-            <p></p>
-            <p></p>
-          </div>
-          <div class="card_0">
-            <h2>远行</h2>
-            <h5>2022 年 4 月 16日</h5>
-            <img class="img_0" src="picture/justin-kauffman-a8lTjWJJgLA-unsplash.jpg" alt="山" width="400"height="300">
-            <p></p>
-            <p></p>
-          </div>
-    </div>
-    <div class="rightcolumn">
-      <div class="card_1">
-        <h2>关于我</h2>
-        <img class="img_user_small_0" src="picture/dima-solomin-mKZrEVFw654-unsplash.jpg" alt="月" width="100"height="100">
-        <p>这个家伙很懒,什么都没留下。</p>
-      </div>
-      <div class="card_1">
-        <h3>热门文章</h3>
-        <p>这里什么都没有...</p>
-      </div>
-      <div class="card_1">
-        <h3>关注我</h3>
-      </div>
-    </div>
+<div class="main">
+<div class="card">
+<div class="picture">
+<img src="picture/00125-3657841641-girl,short hair,brown hair,autumn,white eyes,trail,white shirt,white sweater,black plaid skirt,hooded jacket,sky,cloud,face,bare.png">
+</div>
+<div class="text">
+<h2>Brunette Girl</h2>
+<p>Power By Stable Diffusion</p>
+</div>
+</div>
+<div class="card">
+<div class="picture">
+<img src="picture/00121-3328885487-girl,single ponytail,park,autumn,white eyes,trail.png">
+</div>
+<div class="text">
+<h2>Look Back</h2>
+<p>Power By Stable Diffusion</p>
+</div>
+</div>
+<div class="card">
+<div class="picture">
+<img src="picture/00110-1424161955-girl, brown coat,white hair,white eyes,sky,cloud,sunrise,autumn,hand in pocket,big sister,cold look,maple,park,trail,face.png">
+</div>
+<div class="text">
+<h2>Sunset Girl</h2>
+<p>Power By Stable Diffusion</p>
+</div>
+</div>
+<div class="card">
+  <div class="picture">
+  <img src="picture/00102-3314339551-girl,black suit,white hair,white eyes,sky,cloud,sunrise,summer,alley,hand in pocket,big sister.png">
   </div>
-  
-
-
+  <div class="text">
+  <h2>Floating Girl</h2>
+  <p>Power By Stable Diffusion</p>
+  </div>
+</div>
+<div class="card">
+  <div class="picture">
+  <img src="picture/00119-1519470671-girl,single ponytail,snow,.png">
+  </div>
+  <div class="text">
+  <h2>Falling Snow</h2>
+  <p>Power By Stable Diffusion</p>
+  </div>
+</div>
+</div>
 <div class="footer">
 Copyright Nothing
 </div>
