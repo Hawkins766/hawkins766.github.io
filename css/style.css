@@ -1,0 +1,240 @@
+/*全局背景色*/
+body {
+    font-family: Arial;
+    padding: 0px;
+    color: var(--body-color);
+    background-color: var(--body-bg-color);
+  }
+  :root {
+    --body-color:#333;
+    --body-bg-color:#f1f1f1;
+    --header-color:white;
+    --header-bg-color:#336666;
+    --topnav-a-color:#ffffff;
+    --topnav-hover-bg-color:#336666;
+    --topnav-hover-color:rgb(255, 255, 255);
+    --topnav-bg-color:#669999;
+    --section-bg-color:rgb(255, 255, 255);
+    --section-color:rgb(0, 0, 0);
+    --section-link-color:rgb(0, 0, 0);
+    --section-link-visited-color:rgb(0, 0, 0);
+    --table-head-bg-color:#669999;
+    --table-bg-color:white;
+    --table-border:1px solid #ddd;
+    --introduction-bg-color:#f5f5f5;
+    --footer-bg-color:#336666;
+    --footer-color:white;
+    --img-filter:brightness(100%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --body-color:rgb(0, 0, 0);
+      --body-bg-color:#161513;
+      --header-color:rgb(249, 249, 249);
+      --header-bg-color:#232122;
+      --topnav-a-color:rgb(192, 192, 192);
+      --topnav-hover-bg-color:#555555;
+      --topnav-hover-color:rgb(192, 192, 192);
+      --topnav-bg-color:#232122;
+      --section-bg-color:#232122;
+      --section-color:rgba(238, 238, 238, 0.997);
+      --section-link-color:rgba(238, 238, 238, 0.997);
+      --section-link-visited-color:rgba(238, 238, 238, 0.997);
+      --table-head-bg-color:#333;
+      --table-bg-color:#161513;
+      --table-border:1px solid rgb(184, 184, 184);
+      --introduction-bg-color:#333;
+      --footer-bg-color:#232122;
+      --footer-color:rgba(238, 238, 238, 0.997);
+      --img-filter:brightness(75%);
+    }
+  }
+  /*页头*/
+  .header {
+    background-color: var(--header-bg-color);  /*背景色*/
+    color: var(--header-color);     /*文字颜色*/
+    text-align:center;   /*文字居中*/
+    padding:1px;  /*内边距*/
+    border-radius: 0px;  /*圆角边框*/
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  /* 导航条 */
+  .topnav {
+    overflow: hidden;
+    background-color: var(--topnav-bg-color);
+    border-radius: 5px;
+    border:0px solid #f1f1f1; /*边框*/
+    margin-top:40px; /*外边距*/
+    transition: 3s;
+    margin-left:20%; /*左边距*/
+    margin-right:20%; /*右边距*/
+    margin-bottom:20px; /*下边距*/
+    top: 0;
+  }
+   
+  /* 导航条链接 */
+  .topnav a {
+    float: left;
+    display: block;
+    color: var(--topnav-a-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 0px;
+    font-weight:bold; /*加粗字体*/
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+    transition-duration: 0.4s;
+  }
+  /* 链接颜色修改 */
+  .topnav a:hover {
+    background-color: var(--topnav-hover-bg-color);
+    color: var(--topnav-hover-color);
+  }
+  /*网页内容*/
+  .section {
+      background-color: var(--section-bg-color);
+      color: var(--section-color);
+      width:800px;
+      min-height: 700px;
+      float:left;
+      margin-top: 10px; /*上边距*/
+      margin-bottom:20px; /*下边距*/
+      margin-left:20%; /*左边距*/
+      margin-right:20px; /*右边距*/
+      padding:25px; /*内边距*/
+      border-radius: 5px;  /*圆角边框*/
+      font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  /*右索引外部设置*/
+  #index {
+      background-color: rgb(255, 255, 255);
+      color: #669999;
+      min-width: 210px; 
+      min-height: 100px;
+      float:left;
+      margin-top: 10px; /*上边距*/
+      margin-bottom:20px; /*下边距*/
+      margin-left:20px; /*左边距*/
+      margin-right:0px; /*右边距*/
+      padding:25px; /*内边距*/
+      border-radius: 5px;  /*圆角边框*/
+      font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      position: sticky;
+      top: 0;
+  }
+  /*右索引内部设置*/
+  #ul_1 {
+      list-style-type: none;
+      font-weight:bold;  /*加粗字体*/
+  }
+  /*页尾*/
+  .footer {
+    background-color: var(--footer-bg-color);  /*背景色*/
+    color: var(--footer-color);    /*文字颜色*/
+    clear:both;
+    text-align:center;   /*文字居中*/
+    padding:6px;  /*内边距*/
+    border:0px solid #f1f1f1; /*边框*/
+    margin-top:15px; /*外边距*/
+    border-radius: 0px;  /*圆角边框*/
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif; /*字体*/
+    font-weight:lighter; /*细字体*/
+}
+  
+  /*
+  ====链接相关设置====
+  */
+  /*此处仅对内容内的链接生效*/
+  /* 未访问链接*/
+  .section a:link {
+      color:var(--section-link-color);
+      text-decoration:none;
+  }
+  /* 已访问链接 */
+  .section a:visited {
+      color:var(--section-link-visited-color);
+      text-decoration:none;
+  }
+  /* 鼠标移动到链接上 */
+  .section a:hover {
+      color:#336666;
+      text-decoration:none;
+      font-size:100%;   /*触碰时改变字体大小*/
+      transition-duration: 0.4s;
+  }
+  /* 鼠标点击时 */
+  .section a:active {
+      color:#669999;
+      text-decoration:none;
+  }
+  /*end*/
+  
+  /*此处仅对索引栏中的链接生效*/
+  /* 未访问链接*/
+  #index a:link {
+      color:#336666;
+      text-decoration:none;
+  }
+  /* 已访问链接 */
+  #index a:visited {
+      color:#336666;
+      text-decoration:none;
+  }
+  /* 鼠标移动到链接上 */
+  #index a:hover {
+      color:#669999;
+      text-decoration:none;
+      font-size:100%;   /*触碰时改变字体大小*/
+      transition-duration: 0.4s;
+  }
+  /* 鼠标点击时 */
+  #index a:active {
+      color:#669999;
+      text-decoration:none;
+  }
+  /*end*/
+  /*
+  表格设置
+  */
+  #table_0 {
+      border-collapse: collapse;
+      width: 80%;
+      border-radius: 5px;  /*圆角边框*/
+  }
+  #table_0 th, #table_0 td {
+      border: var(--table-border);
+      padding: 8px;
+      text-align: left;
+  }
+  #table_0 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--table-head-bg-color);
+    color: white;
+  }
+  /*可悬停表格*/
+  #table_0 tr:hover {
+      background-color:var(--table-bg-color);
+  }
+  /*条状表格*/
+  #table_0 tr:nth-child(even){
+      background-color: var(--table-bg-color);
+  } 
+  /*软件简介*/
+  #introduction_0 {
+      background-color: var(--introduction-bg-color);
+      border-top-style: none;
+      border-right-style: none;
+      border-bottom-style: none;
+      border-left-style: solid;
+      border-left-color: #669999;
+      border-width: 0px 0px 0px 5px;
+      text-align: left;
+      padding: 8px;
+      width: 80%;
+  }
+  /*分页文件*/
